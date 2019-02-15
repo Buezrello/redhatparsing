@@ -5,8 +5,14 @@ from argparsing import argvparse
 
 class Parsfile:
 
-    def send_lines_to_finditer(self, filename, pattern, lines, underscore=False, color=False, machine=False):
-        prnt = printstring.Printstring(filename=filename)
+    def __init__(self):
+        self.commandline = ""
+
+    def send_lines_to_finditer(self, pattern, lines, underscore=False, color=False, machine=False, filename=None):
+        if filename:
+            prnt = printstring.Printstring(filename=filename)
+        else:
+            prnt = printstring.Printstring()
         prs = pars.Parsstring()
         count = 0
         for ln in lines:
@@ -22,6 +28,9 @@ class Parsfile:
                 else:
                     prnt.print_string_simple(ln, count)
 
+    def read_user_input(self):
+        self.commandline = raw_input("Enter string which you want to parse\n")
+
     def main(self):
         argprs = argvparse.Argparse()
         #temporary - testing argument parsing
@@ -30,6 +39,16 @@ class Parsfile:
         print 'underscore =', argprs.underscore
         print 'color =', argprs.color
         print 'machine =', argprs.machine
+
+        lines = []
+
+        if not argprs.files:
+            self.read_user_input()
+            lines.append(self.commandline)
+            self.send_lines_to_finditer(argprs.regex, lines,
+                                        argprs.underscore, argprs.color, argprs.machine)
+
+
 
 
 if __name__ == '__main__':
