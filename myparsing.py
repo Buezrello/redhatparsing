@@ -5,19 +5,21 @@ from stringprint import printstring
 class Parsfile:
 
     def send_lines_to_finditer(self, filename, pattern, lines, underscore=False, color=False, machine=False):
+        prnt = printstring.Printstring(filename=filename)
+        prs = pars.Parsstring()
         count = 0
         for ln in lines:
             count += 1
-            tuples = pars.getStartEndSubstring(pattern, ln)
+            tuples = prs.getStartEndSubstring(pattern, ln)
             if tuples:
                 if underscore:
-                    printstring.print_string_with_underscore(ln, tuples, filename, count)
+                    prnt.print_string_with_underscore(ln, tuples, count)
                 elif color:
-                    printstring.print_string_in_color(ln, tuples, filename, count)
+                    prnt.print_string_in_color(ln, tuples, count)
                 elif machine:
-                    printstring.print_string_machine_format(ln, tuples, filename, count)
+                    prnt.print_string_machine_format(ln, tuples, count)
                 else:
-                    printstring.print_string_simple(ln, filename, count)
+                    prnt.print_string_simple(ln, count)
 
 
 if __name__ == '__main__':
