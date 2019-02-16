@@ -20,7 +20,7 @@ Unzip directory with subdirectories
 
 From the directory that contains myparsing.py file run
 
-python myparsing.py -r <REGEX> -f <list of files>
+python myparsing.py -r REGEX -f list of files
 
 
 For help and list of allowed flags run
