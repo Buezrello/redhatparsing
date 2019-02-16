@@ -18,6 +18,7 @@ class Fileread:
     -------
         __init__(filepath)
             Initialization a class with absolute or relative filename
+
         read_filelines()
             Inner method that read text from file
     """
