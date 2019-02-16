@@ -15,8 +15,11 @@ Same regular expression can be used for searching pattern in command line string
 1. The script must be run with Python 2 only, because it used Python 2 specific methods, like raw_input
 2. Text file(s) must contains ASCII text, the script does not understand non-ASCII characters or binary
 3. Regular expression must be enclosed in double or single quotes:
+
 -r 'regular expression'
+
 --regex "regular expression"
+
 Without quotes the script will not recognized the regex
 
 ## Using
