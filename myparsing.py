@@ -5,11 +5,62 @@ from readfile import fileread
 
 
 class Parsfile:
+    """
+    Main class for reading user input
+
+    Attributes
+    ----------
+        commandline : str
+            optional command line - contains STDIN input when files were not specified
+
+    Methods
+    -------
+        __init__()
+            class initialization
+
+        send_lines_to_finditer(pattern, lines, underscore, color, machine, filename=None)
+            read file list or input string, send lines for pattern searching
+
+        read_user_input()
+            read user input - if no files were given
+
+        main()
+            main method, called for starting job
+
+    """
 
     def __init__(self):
+        """
+        Initialization class
+        """
+
         self.commandline = ""
 
     def send_lines_to_finditer(self, pattern, lines, underscore=False, color=False, machine=False, filename=None):
+        """
+        Attributes
+        ----------
+        pattern : str
+            REGEX
+        lines : list
+            list of strings for pattern matching
+        underscrore : boolean
+            flag, if set - inserting ^^^ under matching text
+        color : boolean
+            flag, if set - highlight matching text with color
+        machine : boolean
+            flag, if set - output in machine readable format
+        filename : list
+            list of files
+
+        :param pattern: REGEX
+        :param lines: list of lines in file or line from STDIN
+        :param underscore: if set underscore matching with ^^^
+        :param color: if set highlight matching with color
+        :param machine: if set print outout in machine readable format
+        :param filename: file with text for pattern matching
+        """
+
         if filename:
             prnt = printstring.Printstring(filename=filename)
         else:
@@ -30,9 +81,17 @@ class Parsfile:
                     prnt.print_string_simple(ln, count)
 
     def read_user_input(self):
+        """
+        Read user STDIN input, if no files were given
+        """
+
         self.commandline = raw_input("Enter string which you want to parse\n")
 
     def main(self):
+        """
+        main method, called for starting job
+        """
+
         argprs = argvparse.Argparse()
 
         lines = []
@@ -55,21 +114,6 @@ class Parsfile:
 
 
 if __name__ == '__main__':
-    # tpl = pars.getStartEndSubstring('[\w\.-]+@[\w\.-]+', 'guru99@google.com, careerguru99@hotmail.com, users@yahoomail.com')
-    # print tpl
 
     prs = Parsfile()
-
-    # lines = ['guru99@google.com, careerguru88@hotmail.com, hhhhkhkjhkh users@yahoomail.com',
-    #          'abff, jjj hkhkhk, yuuu',
-    #          'yyyyy, igindin@gmail.com; hkjhkh']
-    #
-    # prs.send_lines_to_finditer("SomeFileName", '[\w\.-]+@[\w\.-]+', lines)
-    # print ''
-    # prs.send_lines_to_finditer('Another File', '[\w\.-]+@[\w\.-]+', lines, underscore=True)
-    # print ''
-    # prs.send_lines_to_finditer('Third File', '[\w\.-]+@[\w\.-]+', lines, color=True)
-    # print ''
-    # prs.send_lines_to_finditer('MachineFile.txt', '[\w\.-]+@[\w\.-]+', lines, machine=True)
-
     prs.main()
