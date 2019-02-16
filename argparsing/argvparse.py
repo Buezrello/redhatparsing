@@ -66,7 +66,9 @@ class Argparse:
                             default=False, help="machine readable output")
         # required arguments
         required_named = self.parser.add_argument_group("required named arguments")
-        required_named.add_argument("-r", "--regex", dest="regex", help="regular expression", required=True)
+        required_named.add_argument("-r", "--regex", dest="regex",
+                                    help="regular expression, must be enclosed in double or single quotes",
+                                    required=True)
         # optional arguments
         self.parser.add_argument("-f", "--files", action="store", dest="files", nargs="*",
                                  help="file(s), if no file provided STDIN required")
