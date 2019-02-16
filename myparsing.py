@@ -85,7 +85,7 @@ class Parsfile:
         Read user STDIN input, if no files were given
         """
 
-        self.commandline = raw_input("Enter string which you want to parse\n")
+        self.commandline = raw_input("Enter the string you want to parse\n")
 
     def main(self):
         """
