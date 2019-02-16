@@ -1,6 +1,7 @@
 from stringparsing import pars
 from stringprint import printstring
 from argparsing import argvparse
+from readfile import fileread
 
 
 class Parsfile:
@@ -33,12 +34,6 @@ class Parsfile:
 
     def main(self):
         argprs = argvparse.Argparse()
-        #temporary - testing argument parsing
-        print 'files =', argprs.files
-        print 'regex =', argprs.regex
-        print 'underscore =', argprs.underscore
-        print 'color =', argprs.color
-        print 'machine =', argprs.machine
 
         lines = []
 
@@ -47,8 +42,16 @@ class Parsfile:
             lines.append(self.commandline)
             self.send_lines_to_finditer(argprs.regex, lines,
                                         argprs.underscore, argprs.color, argprs.machine)
-
-
+        else:
+            # print argprs.files
+            for fl in argprs.files:
+                try:
+                    filerd = fileread.Fileread(fl)
+                    self.send_lines_to_finditer(argprs.regex, filerd.lines,
+                                                argprs.underscore, argprs.color, argprs.machine,
+                                                filerd.shortfilename)
+                except Exception as e:
+                    print str(e), "\n"
 
 
 if __name__ == '__main__':

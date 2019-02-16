@@ -8,17 +8,17 @@ class Argparse:
         # mutual exclusive arguments
         action = self.parser.add_mutually_exclusive_group()
         action.add_argument("-u", "--underscore", action="store_true", dest="underscore",
-                            default=False, help="Print ^^^ under matching text")
+                            default=False, help="print ^^^ under matching text")
         action.add_argument("-c", "--color", action="store_true", dest="color",
-                            default=False, help="Highlight matching text")
+                            default=False, help="highlight matching text")
         action.add_argument("-m", "--machine", action="store_true", dest="machine",
-                            default=False, help="Machine readable output")
+                            default=False, help="machine readable output")
         # required arguments
         required_named = self.parser.add_argument_group("required named arguments")
-        required_named.add_argument("-r", "--regex", dest="regex", help="Regular expression", required=True)
+        required_named.add_argument("-r", "--regex", dest="regex", help="regular expression", required=True)
         # optional arguments
-        self.parser.add_argument("-f", "--files", action="store", dest="files",
-                                 help="File(s). If no file provided STDIN required")
+        self.parser.add_argument("-f", "--files", action="store", dest="files", nargs="*",
+                                 help="file(s), if no file provided STDIN required")
         # command line arguments
         self.files = self._get_files()
         self.regex = self._get_regex()

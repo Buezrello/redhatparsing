@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c51dc18-9d4b-4810-b65e-b51694496a3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/readfile/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readfile/fileread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/argparsing/argvparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/argparsing/argvparse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/myparsing.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stringprint/printstring.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="327">
               <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readfile/fileread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -34,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myparsing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="90">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -46,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/argparsing/argvparse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="300">
+              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -68,9 +81,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/stringprint/printstring.py" />
-        <option value="$PROJECT_DIR$/argparsing/argvparse.py" />
-        <option value="$PROJECT_DIR$/myparsing.py" />
         <option value="$PROJECT_DIR$/stringparsing/pars.py" />
+        <option value="$PROJECT_DIR$/argparsing/argvparse.py" />
+        <option value="$PROJECT_DIR$/readfile/fileread.py" />
+        <option value="$PROJECT_DIR$/myparsing.py" />
       </list>
     </option>
   </component>
@@ -101,6 +115,11 @@
             <path>
               <item name="myparsing" type="b2602c69:ProjectViewProjectNode" />
               <item name="myparsing" type="462c0819:PsiDirectoryNode" />
+              <item name="readfile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myparsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myparsing" type="462c0819:PsiDirectoryNode" />
               <item name="stringparsing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -120,7 +139,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550302160583" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550317347178" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -207,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550256809505</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="deleted *.pyc files">
+      <created>1550302398682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550302398682</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -220,7 +246,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
@@ -247,7 +273,8 @@
     <MESSAGE value="Rewritten modules, changed to classes" />
     <MESSAGE value="Argv parse module created" />
     <MESSAGE value="added functionality - parsing command line string" />
-    <option name="LAST_COMMIT_MESSAGE" value="added functionality - parsing command line string" />
+    <MESSAGE value="deleted *.pyc files" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted *.pyc files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.py">
@@ -264,12 +291,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stringprint/printstring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/stringparsing/pars.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -278,20 +301,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/argparsing/argvparse.py">
+    <entry file="file://$PROJECT_DIR$/readfile/fileread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="255">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/stringprint/printstring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/argparsing/argvparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myparsing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="90">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
